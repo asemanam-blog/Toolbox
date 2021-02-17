@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sharedrtl.css" />
+    <link
+      rel="stylesheet"
+      href="https://bayanbox.ir/download/5744683438632468305/aStyle.css"
+    />
+    <style>
+      body {
+        padding: 1em;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <h4
+      class="w-100 text-center mimenu"
+      style="
+        color: white;
+        background-color: #8e44ad;
+        padding: 0.5em;
+        border-top-right-radius: 1em;
+        border-top-left-radius: 1em;
+        margin-bottom: 2em;
+      "
+    >
+      ابزار تولید تگ ویدیو
+    </h4>
+    <p></p>
+    <div id="vtgenerator" class="form-group">
+      <label for="vfnameMain">نشانی فایل ویدئو(mp4):</label>
+      <input
+        id="vfnameMain"
+        type="text"
+        class="form-input d-block"
+        style="margin-bottom: 1em; margin-top: 0.5em"
+        placeholder="http://bayanbox.ir/view/4719982/1147.mp4"
+      /><button
+        id="atbtn"
+        class="btn btn-primary"
+        style="margin-top: 1em"
+        onclick="hideToggle()"
+      >
+        تنظیمات پیشرفته
+      </button>
+      <div id="advanceOptions" style="display: none">
+        <div class="columns" style="margin-top: 2em">
+          <div class="column col-md-12 col-6">
+            <label for="vfnameogg">نشانی فایل OGG:</label>
+            <input
+              id="vfnameogg"
+              type="text"
+              class="form-input d-block"
+              style="margin-bottom: 1em; margin-top: 0.5em"
+              placeholder="http://bayanbox.ir/view/4719982/1147.ogg"
+            />
+          </div>
+          <div class="column col-md-12 col-6">
+            <label for="vfnamewebm">نشانی فایل webM:</label>
+            <input
+              id="vfnamewebm"
+              type="text"
+              class="form-input d-block"
+              style="margin-bottom: 1em; margin-top: 0.5em"
+              placeholder="http://bayanbox.ir/view/4719982/1147.webm"
+            />
+          </div>
+        </div>
+        <div class="columns" style="margin-top: 1em">
+          <div class="column col-3 col-sm-6">
+            <label class="form-switch"
+              ><input
+                value="control"
+                type="checkbox"
+                checked="checked"
+                name="vtcheck"
+              /><i class="form-icon"></i> نمایش کنترل
+            </label>
+          </div>
+          <div class="column col-3 col-sm-6">
+            <label class="form-switch"
+              ><input value="autoplay" type="checkbox" name="vtcheck" /><i
+                class="form-icon"
+              ></i>
+              پخش اتومات
+            </label>
+          </div>
+          <div class="column col-3 col-sm-6">
+            <label class="form-switch"
+              ><input value="loop" type="checkbox" name="vtcheck" /><i
+                class="form-icon"
+              ></i>
+              تکرار پخش
+            </label>
+          </div>
+          <div class="column col-3 col-sm-6">
+            <label class="form-switch"
+              ><input value="preload" type="checkbox" name="vtcheck" /><i
+                class="form-icon"
+              ></i>
+              پیش بارگزاری
+            </label>
+          </div>
+        </div>
+        <div class="columns" style="margin-top: 1em">
+          <div class="column col-2 col-md-12">
+            <label class="form-switch"
+              ><input value="mute" type="checkbox" name="vtcheck" /><i
+                class="form-icon"
+              ></i>
+              بی صدا
+            </label>
+            <label class="form-switch">
+              <input
+                id="space"
+                type="checkbox"
+                checked="checked"
+                name="vtcheck"
+              /><i class="form-icon"></i> با فاصله
+            </label>
+          </div>
+          <div class="column col-md-6 col-5">
+            <label for="vfwidth">عرض ویدئو: </label>
+            <input
+              id="vfwidth"
+              type="text"
+              class="form-input d-block"
+              style="margin-bottom: 1em; margin-top: 0.5em"
+              placeholder="100%"
+              value="100%"
+            />
+          </div>
+          <div class="column col-md-6 col-5">
+            <label for="vfheight">ارتفاع ویدئو: </label>
+            <input
+              id="vfheight"
+              type="text"
+              class="form-input d-block"
+              style="margin-bottom: 1em; margin-top: 0.5em"
+              placeholder="100%"
+            />
+          </div>
+        </div>
+        <label for="vfpreview" style="margin-top: 1em"
+          >نشانی تصویر پیشنمایش:
+        </label>
+        <input
+          id="vfpreview"
+          type="text"
+          class="form-input d-block"
+          style="margin-bottom: 1em; margin-top: 0.5em"
+          placeholder="http://bayanbox.ir/view/4719982/1147.jpg"
+        />
+        <label for="vftext" style="margin-top: 1em"> متن جایگزین: </label>
+        <input
+          id="vftext"
+          type="text"
+          class="form-input d-block"
+          style="margin-bottom: 1em; margin-top: 0.5em"
+          value="مرورگر شما تگ جدید ویدیوی HTML5 را پشتیبانی نمی‌کند."
+          placeholder="مرورگر شما تگ جدید ویدیوی HTML5 را پشتیبانی نمی‌کند."
+        />
+      </div>
+      <button
+        class="btn btn-primary w-100 d-block"
+        style="margin-top: 1em; margin-bottom: 1em"
+        onclick="vtGenerator()"
+      >
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg=="
+        />
+        تولید کد و پیشنمایش
+      </button>
+      <div id="vtPreview"></div>
+      <textarea
+        spellcheck="false"
+        id="generatedCode"
+        class="w-100"
+        name="gc"
+        cols="30"
+        rows="5"
+        style="direction: ltr"
+        onclick="javascript: this.select();"
+      ></textarea
+      ><button
+        class="btn btn-success w-100 d-block copymim"
+        style="
+          margin-bottom: 1em;
+          border-bottom-left-radius: 2em;
+          border-bottom-right-radius: 2em;
+        "
+        mimr-clipboard-target="#generatedCode"
+      >
+        کپی کد
+        <img
+          style="margin-left: 0.3em"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAc0lEQVRIid3UwQ3AIAiFYUfpKIzeTWSEbvD31vSgBjCm1HcWPqOEUrYPIEDFngqIB1BH8wfxAKHkAQwXOIBzGfBCxgCT02IBpqbFAoSSFxh86E8Aazr1uhJQWsuuVxg99z3gfaIUwBXorx5A8O2j9rRslxs69C8j+kxQagAAAABJRU5ErkJggg=="
+        />
+      </button>
+    </div>
+  </body>
+  <!--scripts and functionality--><!--{{{-->
+  <script src="https://bayanbox.ir/download/4395638023237594655/clipboard.min.js"></script>
+  <script src="./script.js"></script>
+  <!--scripts and functionality--><!--}}}-->
+</html>

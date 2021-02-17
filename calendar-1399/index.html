@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sharedrtl.css">
+  <link rel="stylesheet" href="https://bayanbox.ir/download/5744683438632468305/aStyle.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+<!--header--><!--{{{-->
+<h4 class="w-100 text-center mimenu" style="color: white; background-color: #8e44ad;padding: .5em; border-radius: .5em; border-top-right-radius: 1em; border-top-left-radius: 1em; margin-bottom: 1em;">
+  ابزار تولید کد تقویم
+</h4>
+<!--header--><!--}}}-->
+<!--main choices--><!--{{{-->
+<div class="columns m-1">
+
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="month" value="dey" type="radio" class="m-1" checked="">
+        <i class="form-icon"></i>
+        دی ماه
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="month" value="bahman" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        بهمن ماه
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="month" value="esfand" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        اسفند ماه
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+</div>
+<!--main choices--><!--}}}-->
+
+<button id="atbtn" class="btn btn-primary" style="margin-top: 1em;" onclick="hideToggle()">
+  تنظیمات پیشرفته
+  <i id="atbtnicon" class="icon icon-arrow-left"></i>
+</button>
+
+<div id="advanceOptions" style="display: none; margin-top: 2em;">
+  <!--first row--><!--{{{-->
+    <div class="columns" style="margin-bottom: 2em;"> 
+          <div class="column col-3 col-sm-6">
+            <label class="form-radio" style="width: auto !important;">
+                <input name="calAdType" value="sidebar" type="radio" checked="">
+                <i class="form-icon"></i>
+                تولید برای سایدبار
+            </label>
+          </div>
+          <div class="column col-3 col-sm-6">
+            <label class="form-radio" style="width: auto !important;">
+                <input name="calAdType" value="post" type="radio">
+                <i class="form-icon"></i>
+                تولید برای پست
+            </label>
+          </div>
+          <div class="column col-3 col-sm-12">
+            <label class="form-switch" style="width: auto !important;">
+                <input id="calAdjs" value="js" type="checkbox">
+                <i class="form-icon"></i>
+                فعالسازی جاواسکریپت
+            </label>
+          </div>
+      </div>
+  <!--first row--><!--}}}-->
+  <!--second row--><!--{{{-->
+    <div class="columns" style="margin-top: 1em;">
+      <div class="column col-md-12 col-6">
+              <label for="calHeaderTex">
+                بافت پس‌زمینه عنوان:
+              </label>
+              <input id="calHeaderTex" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="http://s16.picofile.com/file/8411091184/arches.png">
+      </div>
+          <div class="column col-3 col-sm-6">
+            <label for="calHeaderBgColor">
+              رنگ پس‌زمینه عنوان:
+            </label>
+            <input id="calHeaderBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#11A0CC">
+          </div>
+          <div class="column col-3 col-sm-6">
+            <label for="calHeaderTextColor">
+              رنگ متن عنوان:
+            </label>
+            <input id="calHeaderTextColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+          </div>
+    </div>
+  <!--second row--><!--}}}-->
+ <!--third row--><!--{{{-->
+    <div class="columns" style="margin-top: 1em; margin-bottom: 1em;">
+      <div class="column col-md-12 col-6">
+              <label for="calDaysTex">
+                بافت پس‌زمینه روز:
+              </label>
+              <input id="calDaysTex" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="http://s16.picofile.com/file/8411091184/arches.png">
+      </div>
+          <div class="column col-3 col-sm-6">
+            <label for="calDaysBgColor">
+              رنگ پس‌زمینه روز:
+            </label>
+            <input id="calDaysBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#11A0CC">
+          </div>
+          <div class="column col-3 col-sm-6">
+            <label for="calDaysTextColor">
+              رنگ متن روز:
+            </label>
+            <input id="calDaysTextColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+          </div>
+    </div>
+  <!--second row--><!--}}}-->
+  <!--font choices--><!--{{{-->
+    <label for="calHeaderTex">
+  انتخاب فونت:
+    </label>
+<div class="columns" style="margin-top: 1em; margin-bottom: 2em;">
+
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font1" name="fn" value="sahel" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت ساحل
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font2" name="fn" value="estedad" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت استعداد
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font3" name="fn" value="gandom" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت گندم
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font4" name="fn" value="vazir" type="radio" class="m-1" checked="">
+        <i class="form-icon"></i>
+        فونت وزیر
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font5" name="fn" value="tanha" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت تنها
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font6" name="fn" value="samim" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت صمیم
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font7" name="fn" value="shabnam" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت شبنم
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+  </div>
+  <!--font choices--><!--}}}-->
+  <!--extra option--><!--{{{-->
+  <div class="columns" style="margin-bottom: 2em;">
+          <div class="column col-4 col-sm-8">
+            <label class="form-switch" style="width: auto !important;">
+                <input id="calRasmi" value="rasmio" type="checkbox" checked="">
+                <i class="form-icon"></i>
+                درج مناسبت‌های رسمی
+            </label>
+          </div>
+          <div class="column col-4 col-sm-4">
+            <label class="form-switch" style="width: auto !important;">
+              <input id="casSpace" value="space" type="checkbox">
+                <i class="form-icon"></i>
+                با فاصله
+            </label>
+          </div>
+  </div>
+  <!--extra option--><!--}}}-->
+  <!--custom text color--><!--{{{-->
+  <div class="columns">
+    <div class="column col-6 col-sm-12">
+    <label for="calCustomTextColor">
+      رنگ متن مناسبت‌های جدید:
+    </label>
+    <input id="calCustomTextColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#11A0CC">
+    </div>
+  </div>
+  <!--custom text color--><!--}}}-->
+  <!--add monasebat--><!--{{{-->
+  <div id="monaGen">
+    <label>
+      افزودن مناسبت:
+    </label>
+
+    <div id="mona-1" class="columns" style="margin-top: 1em; margin-bottom: 1em;">
+      <div class="column col-1" style="padding: 0;">
+      
+        <button class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;top: 1.9em;" onclick="calDelMona('mona-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+
+      <div class="column col-2">
+        <label for="calAddNumer-1">
+          روز:
+        </label>
+        <input name="calMonaNums" id="calAddNumber-1" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" type="number" placeholder="00" value="1">
+      </div>
+      <div class="column col-9">
+              <label for="calAddDescription-1">
+                مناسبت:
+              </label>
+              <input name="calMonaDescs" id="calAddDescription-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="تولد دوست عزیز من">
+      </div>
+    </div>
+  </div>
+  <!--add monasebat--><!--}}}-->
+<button id="addMBox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addMonaBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+
+</div>
+<button onclick="calGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em;border-radius: 4em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش</button>
+<div id="preview"></div>
+  <textarea spellcheck="false" onclick="javascript: this.select();" id="generatedCode" class="w-100" name="gc" cols="30" rows="5" style="direction: ltr;"></textarea>
+  <button class="btn btn-success w-100 d-block copymim" style="margin-bottom: 1em; border-bottom-left-radius: 2em;border-bottom-right-radius: 2em;" mimr-clipboard-target="#generatedCode">کپی کد
+  <img style="margin-left: .3em;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAc0lEQVRIid3UwQ3AIAiFYUfpKIzeTWSEbvD31vSgBjCm1HcWPqOEUrYPIEDFngqIB1BH8wfxAKHkAQwXOIBzGfBCxgCT02IBpqbFAoSSFxh86E8Aazr1uhJQWsuuVxg99z3gfaIUwBXorx5A8O2j9rRslxs69C8j+kxQagAAAABJRU5ErkJggg==">
+  </button>
+</div>
+</body>
+<!--scripts and functionality--><!--{{{-->
+<script src="https://bayanbox.ir/download/4395638023237594655/clipboard.min.js"></script>
+<script src="./script.js"></script>
+<!--scripts and functionality--><!--}}}-->
+</html>

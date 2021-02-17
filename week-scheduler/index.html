@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sharedrtl.css">
+  <link rel="stylesheet" href="https://bayanbox.ir/download/5744683438632468305/aStyle.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+    #schgenerator label {
+        width: 9% !important;
+    }
+
+    #schgenerator input {
+        padding: .5em;
+    }
+
+    @media (max-width: 600px) {
+      #schgenerator label {
+          width: 12% !important;
+      }
+    }
+
+
+    @media (max-width: 430px) {
+      #schgenerator label {
+          width: 17% !important;
+      }
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+<!--{{{-->
+<h4 class="w-100 text-center mimenu" style="color: white; background-color: #8e44ad;padding: .5em; border-radius: .5em; border-top-right-radius: 1em; border-top-left-radius: 1em; margin-bottom: 1em;">
+  ابزار برنامه هفتگی
+</h4>
+<div id="schgenerator" class="form-group">
+  <div style="display: table;" class="w-100">
+  <label for="schGenShan" style="display: table-cell;">
+    شنبه
+  </label>
+  <input id="schGenShan" type="text" class="form-input d-block" style="display: table-cell; margin-bottom: 1em; margin-top: .5em;" placeholder="پست‌های ادبی و اشعار">
+  </div>
+  <div style="display: table;" class="w-100">
+  <label for="schGenYekShan" style="display: table-cell;">
+    یکشنبه
+  </label>
+  <input id="schGenYekShan" type="text" class="form-input d-block" style="display: table-cell; margin-bottom: 1em; margin-top: .5em;" placeholder="برنامه‌ای که برای این روز دارید.">
+  </div>
+  <div style="display: table;" class="w-100">
+  <label for="schGenDoShan" style="display: table-cell;">
+    دو شنبه
+  </label>
+  <input id="schGenDoShan" type="text" class="form-input d-block" style="display: table-cell; margin-bottom: 1em; margin-top: .5em;" placeholder="برنامه‌ای که برای این روز دارید.">
+  </div>
+  <div style="display: table;" class="w-100">
+  <label for="schGenSeShan" style="display: table-cell;">
+    سه شنبه
+  </label>
+  <input id="schGenSeShan" type="text" class="form-input d-block" style="display: table-cell; margin-bottom: 1em; margin-top: .5em;" placeholder="برنامه‌ای که برای این روز دارید.">
+  </div>
+  <div style="display: table;" class="w-100">
+  <label for="schGenChaharShan" style="display: table-cell;">
+    چهار شنبه
+  </label>
+  <input id="schGenChaharShan" type="text" class="form-input d-block" style="display: table-cell; margin-bottom: 1em; margin-top: .5em;" placeholder="برنامه‌ای که برای این روز دارید.">
+  </div>
+  <div style="display: table;" class="w-100">
+  <label for="schGenPanjShan" style="display: table-cell;">
+    پنج شنبه
+  </label>
+  <input id="schGenPanjShan" type="text" class="form-input d-block" style="display: table-cell; margin-bottom: 1em; margin-top: .5em;" placeholder="برنامه‌ای که برای این روز دارید.">
+  </div>
+  <div style="display: table;" class="w-100">
+  <label for="schGenJome" style="display: table-cell;">
+    جمعه
+  </label>
+  <input id="schGenJome" type="text" class="form-input d-block" style="display: table-cell; margin-bottom: 1em; margin-top: .5em;" placeholder="برنامه‌ای که برای این روز دارید.">
+  </div>
+<!--}}}-->
+  <button id="atbtn" class="btn btn-primary" style="margin-top: 1em;" onclick="hideToggle()">
+  تنظیمات پیشرفته
+  <i id="atbtnicon" class="icon icon-arrow-left"></i>
+  </button>
+  <div id="advanceOptions" style="display: none; margin-top: 2em;">
+    <div class="columns"> <!--{{{-->
+      <div class="column col-3 col-sm-6">
+        <label class="form-radio" style="width: auto !important;">
+            <input name="schAdType" value="sidebar" type="radio" checked="">
+            <i class="form-icon"></i>
+            تولید برای سایدبار
+        </label>
+      </div>
+      <div class="column col-3 col-sm-6">
+        <label class="form-radio" style="width: auto !important;">
+            <input name="schAdType" value="post" type="radio">
+            <i class="form-icon"></i>
+            تولید برای پست
+        </label>
+      </div>
+      <div class="column col-3 col-sm-12">
+        <label class="form-switch" style="width: auto !important;">
+            <input name="schAdjs" value="js" type="checkbox">
+            <i class="form-icon"></i>
+            فعالسازی جاواسکریپت
+        </label>
+      </div>
+    </div> <!--}}}-->
+    <div class="columns" style="margin-top: 1em;"> <!--{{{-->
+      <div class="column col-md-12 col-6">
+        <label for="schAdTitle">عنوان برنامه:</label>
+        <input id="schAdTitle" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="برنامه هفتگی وبلاگ">
+      </div>
+      <div class="column col-md-12 col-6">
+        <label for="schAdWrap">پس‌زمینه جدول:</label>
+        <input id="schAdWrap" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="http://s17.picofile.com/file/8411091134/gplay.png">
+      </div>
+    </div> <!--}}}-->
+    <div class="columns" style="margin-top: 1em;"> <!--{{{ title-->
+      <div class="column col-3 col-sm-6">
+        <label for="schAdTitleBgColor">رنگ پس‌زمینه عنوان:</label>
+        <input id="schAdTitleBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#B33771">
+      </div>
+      <div class="column col-3 col-sm-6">
+        <label for="schAdTitleTextColor">رنگ متن عنوان:</label>
+        <input id="schAdTitleTextColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+      </div>
+      <div class="column col-6 col-sm-12">
+        <label for="schAdTitleTexture">بافت عنوان:</label>
+        <input id="schAdTitleTexture" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="http://s16.picofile.com/file/8411091184/arches.png">
+      </div>
+    </div><!--}}}-->
+    <div class="columns" style="margin-top: 1em;"> <!--{{{ days-->
+      <div class="column col-3 col-sm-6">
+        <label for="schAdDaysBgColor">رنگ پس‌زمینه روزها:</label>
+        <input id="schAdDaysBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#feca57">
+      </div>
+      <div class="column col-3 col-sm-6">
+        <label for="schAdDaysTextColor">رنگ متن روزها:</label>
+        <input id="schAdDaysTextColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+      </div>
+      <div class="column col-6 col-sm-12">
+        <label for="schAdDaysTexture">بافت روزها:</label>
+        <input id="schAdDaysTexture" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="http://s10.picofile.com/file/8395063842/asemana.png">
+      </div>
+    </div><!--}}}-->
+    <div class="columns" style="margin-top: 1em;"> <!--{{{ today-->
+      <div class="column col-3 col-sm-6">
+        <label for="schAdTodayBgColor">رنگ پس‌زمینه امروز:</label>
+        <input id="schAdTodayBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#fc5c65">
+      </div>
+      <div class="column col-3 col-sm-6">
+        <label for="schAdTodayTextColor">رنگ متن امروز:</label>
+        <input id="schAdTodayTextColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+      </div>
+      <div class="column col-6 col-sm-12">
+        <label for="schAdTodayTexture">بافت امروز:</label>
+        <input id="schAdTodayTexture" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="http://s10.picofile.com/file/8395063842/asemana.png">
+      </div>
+    </div><!--}}}-->
+    <div class="columns" style="margin-top: 1em;"> <!--{{{ date-->
+      <div class="column col-3 col-sm-6">
+        <label for="schAdDateBgColor">رنگ پس‌زمینه تاریخ:</label>
+        <input id="schAdDateBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#fed330">
+      </div>
+      <div class="column col-3 col-sm-6">
+        <label for="schAdDateTextColor">رنگ متن تاریخ:</label>
+        <input id="schAdDateTextColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+      </div>
+      <div class="column col-6 col-sm-12">
+        <label for="schAdDateTexture">بافت تاریخ:</label>
+        <input id="schAdDateTexture" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="http://s10.picofile.com/file/8395063842/asemana.png">
+      </div>
+    </div><!--}}}-->
+
+  </div>
+<!--{{{ Generating-->
+  <button onclick="schGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش</button>
+<div id="vtPreview"></div>
+  <textarea spellcheck="false" onclick="javascript: this.select();" id="generatedCode" class="w-100" name="gc" cols="30" rows="5" style="direction: ltr;"></textarea>
+  <button class="btn btn-success w-100 d-block copymim" style="margin-bottom: 1em; border-bottom-left-radius: 2em;border-bottom-right-radius: 2em;" mimr-clipboard-target="#generatedCode">کپی کد
+  <img style="margin-left: .3em;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAc0lEQVRIid3UwQ3AIAiFYUfpKIzeTWSEbvD31vSgBjCm1HcWPqOEUrYPIEDFngqIB1BH8wfxAKHkAQwXOIBzGfBCxgCT02IBpqbFAoSSFxh86E8Aazr1uhJQWsuuVxg99z3gfaIUwBXorx5A8O2j9rRslxs69C8j+kxQagAAAABJRU5ErkJggg==">
+  </button>
+<!--}}}-->
+</div>
+</body>
+<!--scripts and functionality--><!--{{{-->
+<script src="https://bayanbox.ir/download/4395638023237594655/clipboard.min.js"></script>
+<script src="./script.js"></script>
+<!--scripts and functionality--><!--}}}-->
+</html>
