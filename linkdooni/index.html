@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sharedrtl.css">
+  <link rel="stylesheet" href="https://bayanbox.ir/download/5744683438632468305/aStyle.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+<!--UI part of tool--><!--{{{-->
+<h4 class="w-100 text-center mimenu" style="color: white; background-color: #8e44ad;padding: .5em; border-radius: .5em; border-top-right-radius: 1em; border-top-left-radius: 1em; margin-bottom: 1em;">
+  جعبه ابزار لینکدونی
+</h4>
+<!--tab lists--><!--{{{-->
+<ul class="tab tab-block">
+  <li id="tabGooderei" class="tab-item active">
+    <a href="#gooderei">
+      گودر
+    </a>
+  </li>
+  <li id="tabMagazinei" class="tab-item">
+    <a href="#magazinei">
+      مجله
+    </a>
+  </li>
+  <li id="tabBayanei" class="tab-item">
+    <a href="#bayanei">
+      بیان
+    </a>
+  </li>
+  <li id="tabTagei" class="tab-item">
+    <a href="#tagei">
+      تگ
+    </a>
+  </li>
+  <li id="tabChipei" class="tab-item">
+    <a href="#chipei">
+      چیپ
+    </a>
+  </li>
+</ul>
+<ul class="tab tab-block">
+  <li id="tabGallie1"class="tab-item">
+    <a href="#gallie1">
+      گالری ۱
+    </a>
+  </li>
+  <li id="tabGallie2" class="tab-item">
+    <a href="#gallie2">
+      گالری ۲
+    </a>
+  </li>
+  <li id="tabCardie" class="tab-item">
+    <a href="#cardie">
+      کارت
+    </a>
+  </li>
+  <li id="tabAsemanei" class="tab-item">
+    <a href="#asemanei">
+      آسمانی
+    </a>
+  </li>
+</ul>
+<!--tab lists--><!--}}}-->
+<p style="margin-bottom: 0;">&nbsp;</p>
+<div id="fontChooser">
+  <!--font choices--><!--{{{-->
+    <label for="calHeaderTex">
+  انتخاب فونت:
+    </label>
+<div class="columns" style="margin-top: 1em; margin-bottom: 2em;">
+
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font1" name="fn" value="sahel" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت ساحل
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font2" name="fn" value="estedad" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت استعداد
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font3" name="fn" value="gandom" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت گندم
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font4" name="fn" value="vazir" type="radio" class="m-1" checked="">
+        <i class="form-icon"></i>
+        فونت وزیر
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font5" name="fn" value="tanha" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت تنها
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font6" name="fn" value="samim" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت صمیم
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font7" name="fn" value="shabnam" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت شبنم
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+  </div>
+  <!--font choices--><!--}}}-->
+</div>
+<!--gooderei tab--><!--{{{-->
+<div id="gooderei" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 2em;">
+    <div class="column col-2 col-sm-3" style="text-align: center;">
+      <label class="d-inline" for="gooFontSize">
+        اندازه متن:
+      </label>
+    </div>
+    <div class="column col-3">
+        <input id="gooFontSize" type="text" class="form-input d-inline" style="margin-bottom: 1em; margin-top: .5em;" value="16px">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="gooSpace" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-4 col-sm-6">
+      <label for="gooBgColor">
+        رنگ پس‌زمینه:
+      </label>
+      <input id="gooBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label for="gooTitleColor">
+        رنگ متن عنوان:
+      </label>
+      <input id="gooTitleColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+    </div>
+    <div class="column col-4 col-sm-12">
+      <label for="gooSubColor">
+        رنگ متن مقصد:
+      </label>
+      <input id="gooSubColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#c3c3c4">
+    </div>
+  </div>
+<!--repeatable block--><!--{{{-->
+  <div id="gooGen">
+    <div id="gooLink-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button id="delGooLink-1" class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="gooDelLink('gooLink-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="gooTitleText-1" style="margin-top: 1em;">
+              متن عنوان:
+            </label>
+            <input id="gooTitleText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder=" پشتیبان گیری از وبلاگ‌های میهن بلاگ">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="gooSubText-1" style="margin-top: 1em;">
+              متن مقصد:
+            </label>
+            <input id="gooSubText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="وبلاگ آسمانم">
+          </div>
+          <div class="column col-12">
+            <label for="gooAddress-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="gooAddress-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/1399/09/20/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="gooAddbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addGooBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="gooderGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+</div>
+<!--gooderei tab--><!--}}}-->
+<!--magazinei tab--><!--{{{-->
+<div id="magazinei" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 2em;">
+    <div class="column col-2 col-sm-3" style="text-align: center;">
+      <label class="d-inline" for="magFontSize">
+        اندازه متن:
+      </label>
+    </div>
+    <div class="column col-3">
+        <input id="magFontSize" type="text" class="form-input d-inline" style="margin-bottom: 1em; margin-top: .5em;" value="16px">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="magSpace" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 2em;">
+    <div class="column col-4 col-sm-6">
+      <label for="magBgColor">
+        رنگ پس‌زمینه:
+      </label>
+      <input id="magBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label for="magTitleColor">
+        رنگ متن عنوان:
+      </label>
+      <input id="magTitleColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+    </div>
+    <div class="column col-4 col-sm-12">
+      <label for="magSubColor">
+        رنگ متن مقصد:
+      </label>
+      <input id="magSubColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#c3c3c4">
+    </div>
+  </div>
+<!--repeatable block--><!--{{{-->
+  <div id="magGen">
+    <div id="magLink-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button id="delGooLink-1" class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="magDelLink('magLink-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="magTitleText-1" style="margin-top: 1em;">
+              متن عنوان:
+            </label>
+            <input id="magTitleText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="پشتیبان‌گیری از میهن‌بلاگ">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="magSubText-1" style="margin-top: 1em;">
+              متن مقصد:
+            </label>
+            <input id="magSubText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="وبلاگ آسمانم">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="magImage-1" style="margin-top: 1em;">
+              آدرس تصویر:
+            </label>
+            <input id="magImage-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://bayanbox.ir/view/451960159/image.jpg">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="magAddress-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="magAddress-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="magAddbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addMagBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="magazineGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+
+</div>
+<!--magazinei tab--><!--}}}-->
+<!--bayanei tab--><!--{{{-->
+<div id="bayanei" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 2em;">
+    <div class="column col-2 col-sm-3" style="text-align: center;">
+      <label class="d-inline" for="bayanFontSize">
+        اندازه متن:
+      </label>
+    </div>
+    <div class="column col-3">
+        <input id="bayanFontSize" type="text" class="form-input d-inline" style="margin-bottom: 1em; margin-top: .5em;" value="16px">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="bayanSpace" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 2em;">
+    <div class="column col-4 col-sm-6">
+      <label for="bayanBgColor">
+        رنگ پس‌زمینه:
+      </label>
+      <input id="bayanBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label for="bayanTitleColor">
+        رنگ متن عنوان:
+      </label>
+      <input id="bayanTitleColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#0077ff">
+    </div>
+    <div class="column col-4 col-sm-12">
+      <label for="bayanSubColor">
+        رنگ متن مقصد:
+      </label>
+      <input id="bayanSubColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+    </div>
+  </div>
+<!--repeatable block--><!--{{{-->
+  <div id="bayanGen">
+    <div id="bayanLink-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="bayanDelLink('bayanLink-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="bayanTitleText-1" style="margin-top: 1em;">
+              متن عنوان:
+            </label>
+            <input id="bayanTitleText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="پشتیبان‌گیری از میهن‌بلاگ">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="bayanSubText-1" style="margin-top: 1em;">
+              متن مقصد:
+            </label>
+            <input id="bayanSubText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="وبلاگ آسمانم">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="bayanAvatar-1" style="margin-top: 1em;">
+              آدرس آواتار:
+            </label>
+            <input id="bayanAvatar-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://bayanbox.ir/view/451960159/ibayane.jpg">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="bayanAddress-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="bayanAddress-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="bayanAddbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addBayanBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="bayanGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+
+</div>
+<!--bayanei tab--><!--}}}-->
+<!--tagei tab--><!--{{{-->
+<div id="tagei" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-2 col-sm-3" style="text-align: center;">
+      <label class="d-inline" for="tagFontSize">
+        اندازه متن:
+      </label>
+    </div>
+    <div class="column col-3">
+        <input id="tagFontSize" type="text" class="form-input d-inline" style="margin-bottom: 1em; margin-top: .5em;" value="16px">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="tagSpace" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-6">
+      <label for="tagBgColor">
+        رنگ پس‌زمینه:
+      </label>
+      <input id="tagBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#059ed5">
+    </div>
+    <div class="column col-6">
+      <label for="tagTitleColor">
+        رنگ متن عنوان:
+      </label>
+      <input id="tagTitleColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+    </div>
+  </div>
+<!--repeatable block--><!--{{{-->
+  <div id="tagGen" style="width: 100%;margin-top: 2em;">
+    <div id="tagLink-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button id="delGooLink-1" class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="tagDelLink('tagLink-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="tagTitleText-1" style="margin-top: 1em;">
+              متن عنوان:
+            </label>
+            <input id="tagTitleText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder=" پشتیبان گیری از وبلاگ‌های میهن بلاگ">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="tagAddress-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="tagAddress-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/1399/09/20/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="tagAddbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addTagBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="tagGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+</div>
+<!--tagei tab--><!--}}}-->
+<!--chipei tab--><!--{{{-->
+<div id="chipei" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-2 col-sm-3" style="text-align: center;">
+      <label class="d-inline" for="chipFontSize">
+        اندازه متن:
+      </label>
+    </div>
+    <div class="column col-3">
+        <input id="chipFontSize" type="text" class="form-input d-inline" style="margin-bottom: 1em; margin-top: .5em;" value="16px">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="chipSpace" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-6">
+      <label for="chipBgColor">
+        رنگ پس‌زمینه:
+      </label>
+      <input id="chipBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#f1f1fc">
+    </div>
+    <div class="column col-6">
+      <label for="chipTitleColor">
+        رنگ متن عنوان:
+      </label>
+      <input id="chipTitleColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+    </div>
+  </div>
+<!--repeatable block--><!--{{{-->
+  <div id="chipGen" style="width: 100%;margin-top: 2em;">
+    <div id="chipLink-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="chipDelLink('chipLink-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="chipTitleText-1" style="margin-top: 1em;">
+              متن عنوان:
+            </label>
+            <input id="chipTitleText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder=" پشتیبان گیری از وبلاگ‌های میهن بلاگ">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="chipAddress-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="chipAddress-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/1399/09/20/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="chipAddbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addChipBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="chipGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+</div>
+<!--chipei tab--><!--}}}-->
+<!--gallie1 tab--><!--{{{-->
+<div id="gallie1" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="gal1Space" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 2em; width: 100%;">
+
+    <div class="column col-4 col-sm-6">
+      <label class="form-radio">
+        <input name="colGal1" value="one" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        دو ستونه:
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-radio">
+        <input name="colGal1" value="two" type="radio" class="m-1" checked="">
+        <i class="form-icon"></i>
+        چهار ستونه:
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+  </div>
+
+<!--repeatable block--><!--{{{-->
+  <div id="gal1Gen">
+    <div id="gal1Link-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-12" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="gal1Image-1" style="margin-top: 1em;">
+              آدرس تصویر:
+            </label>
+            <input id="gal1Image-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://gal1box.ir/view/451960159/igal1e.jpg">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="gal1Address-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="gal1Address-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="gal1Addbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addGal1Box()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+
+<!--{{{ Generating-->
+  <button onclick="gal1Generator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+</div>
+<!--gallie1 tab--><!--}}}-->
+<!--gallie2 tab--><!--{{{-->
+<div id="gallie2" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 2em; width: 100%;">
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="gal2Space" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+<!--repeatable block--><!--{{{-->
+  <div id="gal2Gen">
+    <div id="gal2Link-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="gal2DelLink('gal2Link-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="gal2Avatar-1" style="margin-top: 1em;">
+              آدرس تصویر:
+            </label>
+            <input id="gal2Avatar-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://gal2box.ir/view/451960159/igal2e.jpg">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="gal2Address-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="gal2Address-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="gal2Addbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addGal2Box()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="gal2Generator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+</div>
+<!--gallie2 tab--><!--}}}-->
+<!--cardie tab--><!--{{{-->
+<div id="cardie" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-2 col-sm-3" style="text-align: center;">
+      <label class="d-inline" for="cardFontSize">
+        اندازه متن:
+      </label>
+    </div>
+    <div class="column col-3">
+        <input id="cardFontSize" type="text" class="form-input d-inline" style="margin-bottom: 1em; margin-top: .5em;" value="16px">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="cardSpace" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 2em;">
+
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="colCard" value="one" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        یک ستونه
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="colCard" value="two" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        دو ستونه
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="colCard" value="three" type="radio" class="m-1" checked="">
+        <i class="form-icon"></i>
+        سه ستونه
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+  </div>
+
+  <div class="columns" style="margin-bottom: 2em;">
+    <div class="column col-4 col-sm-6">
+      <label for="cardBgColor">
+        رنگ پس‌زمینه:
+      </label>
+      <input id="cardBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label for="cardTitleColor">
+        رنگ متن عنوان:
+      </label>
+      <input id="cardTitleColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+    </div>
+    <div class="column col-4 col-sm-12">
+      <label for="cardSubColor">
+        رنگ متن مقصد:
+      </label>
+      <input id="cardSubColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#c3c3c4">
+    </div>
+  </div>
+<!--repeatable block--><!--{{{-->
+  <div id="cardGen">
+    <div id="cardLink-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="cardDelLink('cardLink-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="cardTitleText-1" style="margin-top: 1em;">
+              متن عنوان:
+            </label>
+            <input id="cardTitleText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="پشتیبان‌گیری از میهن‌بلاگ">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="cardSubText-1" style="margin-top: 1em;">
+              متن مقصد:
+            </label>
+            <input id="cardSubText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="وبلاگ آسمانم">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="cardImage-1" style="margin-top: 1em;">
+              آدرس تصویر:
+            </label>
+            <input id="cardImage-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://cardbox.ir/view/451960159/icarde.jpg">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="cardAddress-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="cardAddress-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="cardAddbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addCardBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="cardGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+      
+</div>
+<!--cardie tab--><!--}}}-->
+<!--asemanei tab--><!--{{{-->
+<div id="asemanei" class="d-none" style="padding-top: 0;">
+
+  <div class="columns" style="margin-bottom: 1em;">
+    <div class="column col-2 col-sm-3" style="text-align: center;">
+      <label class="d-inline" for="ayFontSize">
+        اندازه متن:
+      </label>
+    </div>
+    <div class="column col-3">
+        <input id="ayFontSize" type="text" class="form-input d-inline" style="margin-bottom: 1em; margin-top: .5em;" value="16px">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label class="form-switch" style="width: auto !important;">
+        <input id="aySpace" value="space" type="checkbox">
+          <i class="form-icon"></i>
+          با فاصله
+      </label>
+    </div>
+  </div>
+
+  <div class="columns" style="margin-bottom: 2em; width: 100%;">
+
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="colAy" value="one" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        یک ستونه
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-4">
+      <label class="form-radio">
+        <input name="colAy" value="two" type="radio" class="m-1" checked="">
+        <i class="form-icon"></i>
+        دو ستونه
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+  </div>
+
+  <div class="columns" style="margin-bottom: 2em;">
+    <div class="column col-4 col-sm-6">
+      <label for="ayBgColor">
+        رنگ پس‌زمینه:
+      </label>
+      <input id="ayBgColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#032032">
+    </div>
+    <div class="column col-4 col-sm-6">
+      <label for="ayTitleColor">
+        رنگ متن عنوان:
+      </label>
+      <input id="ayTitleColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+    </div>
+    <div class="column col-4 col-sm-12">
+      <label for="aySubColor">
+        رنگ متن مقصد:
+      </label>
+      <input id="aySubColor" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+    </div>
+  </div>
+<!--repeatable block--><!--{{{-->
+  <div id="ayGen">
+    <div id="ayLink-1" class="columns" style="width: 100%; margin-bottom: 1em;">
+      <div class="column col-1">
+        <button class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="ayDelLink('ayLink-1')">
+          <i class="icon icon-minus"></i>
+        </button>
+      </div>
+      <div class="column col-11" style="border: 1px solid rgb(107, 105, 221); border-radius: 1em; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px !important; padding: 1em; background-color: rgb(250, 250, 250); margin-bottom: 2em;">
+        <div class="columns">
+          <div class="column col-6 col-sm-12">
+            <label for="ayTitleText-1" style="margin-top: 1em;">
+              متن عنوان:
+            </label>
+            <input id="ayTitleText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="پشتیبان‌گیری از میهن‌بلاگ">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="aySubText-1" style="margin-top: 1em;">
+              متن مقصد:
+            </label>
+            <input id="aySubText-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="وبلاگ آسمانم">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="ayImage-1" style="margin-top: 1em;">
+              آدرس آواتار:
+            </label>
+            <input id="ayImage-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://aybox.ir/view/451960159/iaye.jpg">
+          </div>
+          <div class="column col-6 col-sm-12">
+            <label for="ayAddress-1" style="margin-top: 1em;">
+              آدرس مقصد:
+            </label>
+            <input id="ayAddress-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em; text-align: left;" placeholder="http://asemanam.blog.ir/mihanblog-backup-generator">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--repeatable block--><!--}}}-->
+<!--add button--><!--{{{-->
+<button id="ayAddbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addAyBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+</button>
+<!--add button--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="ayGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+<!--}}}-->
+</div>
+<!--asemanei tab--><!--}}}-->
+
+<!--preview--><!--{{{-->
+<div id="preview"></div>
+<!--preview--><!--}}}-->
+<!--generated--><!--{{{-->
+  <textarea spellcheck="false" onclick="javascript: this.select();" id="generatedCode" class="w-100" name="gc" cols="30" rows="5" style="direction: ltr;"></textarea>
+  <button class="btn btn-success w-100 d-block copymim" style="margin-bottom: 1em; border-bottom-left-radius: 2em;border-bottom-right-radius: 2em;" mimr-clipboard-target="#generatedCode">کپی کد
+  <img style="margin-left: .3em;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAc0lEQVRIid3UwQ3AIAiFYUfpKIzeTWSEbvD31vSgBjCm1HcWPqOEUrYPIEDFngqIB1BH8wfxAKHkAQwXOIBzGfBCxgCT02IBpqbFAoSSFxh86E8Aazr1uhJQWsuuVxg99z3gfaIUwBXorx5A8O2j9rRslxs69C8j+kxQagAAAABJRU5ErkJggg==">
+  </button>
+<!--generated--><!--}}}-->
+<!--UI part of tool--><!--}}}-->
+</body>
+<!--scripts and functionality--><!--{{{-->
+<script src="https://bayanbox.ir/download/4395638023237594655/clipboard.min.js"></script>
+<script src="./script.js"></script>
+<!--scripts and functionality--><!--}}}-->
+</html>
+

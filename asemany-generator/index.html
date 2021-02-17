@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sharedrtl.css">
+  <link rel="stylesheet" href="https://bayanbox.ir/download/5744683438632468305/aStyle.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+<!--title of tool--><!--{{{-->
+<h4 class="w-100 text-center mimenu" style="color: white; background-color: #789fb4;padding: .5em; border-radius: .5em; border-top-right-radius: 1em; border-top-left-radius: 1em; margin-bottom: 1em;">
+  ابزار تولید کد پست‌های آسمانی
+</h4>
+<!--title of tool--><!--}}}-->
+<!--UI part of tool--><!--{{{-->
+<div id="AseGen" class="form-group">
+  <!--box code--><!--{{{-->
+  <div id="post-1" class="columns" style="width: 100%; margin-bottom: 2em;">
+    <div class="column col-1">
+      <!--delete box button--><!--{{{-->
+      <button id="delAbox-1" class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em;" onclick="AseDelPost('post-1')">
+        <i id="abtDel" class="icon icon-minus"></i>
+      </button>
+      <!--delete box button--><!--}}}-->
+      <!--summary box button--><!--{{{-->
+      <button id="summaryBox-1" class="btn btn-light" style="width: 35px;height: 35px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;bottom: 1em; margin-top: 1em;" onclick="AseSummary('postBox-1', 'summaryBox-1', 'abtSum-1', 'fakeDiv-1', 'titlePost-1')">
+        <i id="abtSum-1" class="icon icon-arrow-up"></i>
+      </button>
+      <!--summary box button--><!--}}}-->
+    </div>
+    <div id="postBox-1" class="column col-11" style="border: 1px solid #6b69dd;border-radius: 1em;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;padding: 1em;background-color: #fafafa; margin-bottom: 2em;">
+      <!--background and border color--><!--{{{-->
+      <div class="columns" style="margin-top: 2em;">
+        <div class="column col-9 col-sm-12">
+          <label for="bgPost-1">
+            نشانی تصویر پس‌زمینه:
+          </label>
+          <input id="bgPost-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="http://s13.picofile.com/file/8399676392/ghami.jpg">
+        </div>
+        <div class="column col-3 col-sm-6">
+          <label for="bgBorder-1">
+            رنگ نوار پس‌زمینه
+          </label>
+          <input id="bgBorder-1" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#fdc94a">
+        </div>
+      </div>
+      <!--background and border color--><!--}}}-->
+      <!--color of inner box & text & border--><!--{{{-->
+      <div class="columns">
+        <div class="column col-4 col-sm-6">
+          <label for="boxBgColor-1">
+            رنگ پس‌زمینه جعبه:
+          </label>
+          <input id="boxBgColor-1" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#032032">
+        </div>
+        <div class="column col-4 col-sm-6">
+          <label for="boxTextColor-1">
+            رنگ متن جعبه:
+          </label>
+          <input id="boxTextColor-1" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+        </div>
+        <div class="column col-4 col-sm-6">
+          <label for="boxBorder-1">
+            رنگ نوار جعبه:
+          </label>
+          <input id="boxBorder-1" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#fdc94a">
+        </div>
+      </div>
+      <!--color of inner box & text & border--><!--}}}-->
+      <!--avatar and border color--><!--{{{-->
+      <div class="columns" style="margin-top: 2em;">
+        <div class="column col-9 col-sm-12">
+          <label for="avPost-1">
+            نشانی آواتار نویسنده:
+          </label>
+          <input id="avPost-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="https://s12.picofile.com/file/8399676318/ghami.jpeg">
+        </div>
+        <div class="column col-3 col-sm-6">
+          <label for="avBorder-1">
+            رنگ نوار آواتار:
+          </label>
+          <input id="avBorder-1" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+        </div>
+      </div>
+      <!--avatar and border color--><!--}}}-->
+      <!--title of post and link of post--><!--{{{-->
+      <div class="columns">
+        <div class="column col-6 col-sm-12">
+          <label for="titlePost-1">
+            عنوان پست:
+          </label>
+          <input id="titlePost-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="نامه‌ای به تو ">
+        </div>
+        <div class="column col-6 col-sm-12">
+          <label for="linkPost-1">
+            لینک پست:
+          </label>
+          <input id="linkPost-1" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="http://ghami.blog.ir/post/142">
+        </div>
+      </div>
+      <!--title of post and link of post--><!--}}}-->
+      <!--first and second line of post--><!--{{{-->
+      <div class="columns">
+        <div class="column col-6 col-sm-12">
+          <label for="fline-1">
+            خط اول پست:
+          </label>
+          <textarea id="fline-1" spellcheck="false" class="w-100" name="gc" cols="15" rows="3" style="direction: rtl;margin-bottom: 1em; margin-top: .5em;" placeholder="دیگر ناتوانم از دوست داشتن. "></textarea>
+        </div>
+        <div class="column col-6 col-sm-12">
+          <label for="sline-1">
+            خط دوم پست:
+          </label>
+          <textarea id="sline-1" spellcheck="false" class="w-100" name="gc" cols="15" rows="3" style="direction: rtl;margin-bottom: 1em; margin-top: .5em;" placeholder="به خاطرات و خطورات ذهن لکنت‌دارم که رجوع می‌کنم، تو آخرین بودی."></textarea>
+        </div>
+      </div>
+      <!--first and second line of post--><!--}}}-->
+      <!--color of review background and text--><!--{{{-->
+      <div class="columns">
+        <div class="column col-6">
+          <label for="bgReviewColor-1">
+            رنگ پس‌زمینه معرفی:
+          </label>
+          <input id="bgReviewColor-1" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#ffffff">
+        </div>
+        <div class="column col-6">
+          <label for="textReviewColor-1">
+            رنگ متن بررسی:
+          </label>
+          <input id="textReviewColor-1" type="color" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" value="#000000">
+        </div>
+      </div>
+      <!--color of review background and text--><!--}}}-->
+      <!--review of the post--><!--{{{-->
+      <label for="reviewPost-1">
+        بررسی و معرفی پست:
+      </label>
+      <textarea id="reviewPost-1" spellcheck="false" class="w-100" name="gc" cols="20" rows="4" style="direction: rtl;margin-bottom: 1em; margin-top: .5em;" placeholder="وقتی این پست رو می‌خوندم احساس کردم که انگار روی آب شناور شدم. چرا که محتوا و ادبیات..."></textarea>
+      <!--review of the post--><!--}}}-->
+    </div>
+    <div id="fakeDiv-1" class="d-none column col-11"></div>
+  </div>
+  <!--box code--><!--}}}-->
+</div>
+  <!--Add buttom--><!--{{{-->
+  <button id="addAbox" class="btn btn-lg btn-light" style="margin-top: 1em;width: 50px;height: 50px;border-radius: 50%;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 5px 0 rgba(0,0,0,0.12) !important;position: relative;right: 1em;" onclick="addAseBox()">
+    <i id="abtAdd" class="icon icon-plus"></i>
+  </button>
+  <!--Add buttom--><!--}}}-->
+<!--{{{ Generating-->
+  <button onclick="AseGenerator()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em; border-radius: 200em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد و پیشنمایش
+  </button>
+  <textarea spellcheck="false" onclick="javascript: this.select();" id="generatedCode" class="w-100" name="gc" cols="30" rows="5" style="direction: ltr;"></textarea>
+  <button class="btn btn-success w-100 d-block copymim" style="margin-bottom: 1em; border-bottom-left-radius: 2em;border-bottom-right-radius: 2em;" mimr-clipboard-target="#generatedCode">کپی کد
+  <img style="margin-left: .3em;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAc0lEQVRIid3UwQ3AIAiFYUfpKIzeTWSEbvD31vSgBjCm1HcWPqOEUrYPIEDFngqIB1BH8wfxAKHkAQwXOIBzGfBCxgCT02IBpqbFAoSSFxh86E8Aazr1uhJQWsuuVxg99z3gfaIUwBXorx5A8O2j9rRslxs69C8j+kxQagAAAABJRU5ErkJggg==">
+  </button>
+<!--}}}-->
+<!--preview--><!--{{{-->
+<div id="preview"></div>
+<!--preview--><!--}}}-->
+<!--UI part of tool--><!--}}}-->
+</body>
+<!--scripts and functionality--><!--{{{-->
+<script src="https://bayanbox.ir/download/4395638023237594655/clipboard.min.js"></script>
+<script src="./script.js"></script>
+<!--scripts and functionality--><!--}}}-->
+</html>
