@@ -44,7 +44,7 @@
 
         bc_posts = xmlDoc.getElementsByTagName("POST");
         // staty variables}}}
-        // first part of puzzle of mainbar{{{
+        // first part of mainbar's puzzle{{{
         bc_blog_header = `<a href="${bc_link}">
                 <div class="bTitle center">
                   ${bc_title}
