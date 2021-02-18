@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sharedrtl.css">
+  <link rel="stylesheet" href="https://bayanbox.ir/download/5744683438632468305/aStyle.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+
+    .mimenu::before {
+        content: url("http://bayanbox.ir/download/7306815794393993662/luffy-hright20.svg");
+    }
+
+    .mimenu::after {
+        content: url("http://bayanbox.ir/download/6276574630031982961/luffy-hleft20.svg");
+    }
+  </style>
+  <title>
+ابزار تولید کد فونت
+  </title>
+</head>
+<body>
+<a href="http://asemanam.blog.ir/1399/06/23/change-current-weblog-font" target="_blank">
+<h4 class="w-100 text-center mimenu" style="color: white; background-color: #8e44ad;padding: .5em; border-top-right-radius: 1em; border-top-left-radius: 1em; margin-bottom: 2em;">
+ابزار تولید کد فونت
+</h4>
+</a>
+
+<p>
+</p>
+<div id="fgenerator" class="form-group">
+  <label for="fname">نام فونت:</label>
+  <input id="fname" type="text" class="form-input d-block" style="margin-bottom: 1em; margin-top: .5em;" placeholder="yekan">
+  <div class="columns">
+
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font1" name="fn" value="sahel" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت ساحل
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font2" name="fn" value="estedad" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت استعداد
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font3" name="fn" value="gandom" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت گندم
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font4" name="fn" value="vazir" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت وزیر
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font5" name="fn" value="tanha" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت تنها
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font6" name="fn" value="samim" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت صمیم
+        <div class="d-block"></div>
+      </label>
+    </div>
+    <div class="column col-3 col-sm-6">
+      <label class="form-radio">
+        <input id="font7" name="fn" value="shabnam" type="radio" class="m-1">
+        <i class="form-icon"></i>
+        فونت شبنم
+        <div class="d-block"></div>
+      </label>
+    </div>
+
+  </div>
+  <button onclick="fontGenerator1()" class="btn btn-primary w-100 d-block" style="margin-top: 1em; margin-bottom: 1em;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA0ElEQVRIid2VQRGEMAxFkYCESkBCJSABJyAFB+CkOFicvL0kM5ndUgIsB/Zf+cnrpL+hqv5WQAQmRJnvqgmIR5t3fKgAUHXe5sEUDUBd8NbiUQUPYBTz6DrR0RpgFXNzANBIzctjzs78Z3W3AoBWfOsJgI623TIEIGl6TgA0TSmbJhO1pRTNAqCW2vyoDCBdAKQSIJgTDCcAOqJl88GZS97P83etXnLcMz74HYjxyqpYPebbl51d130pshLN3viD90T3/XBMgwjMDsC8G81H6w3McglZDqXwugAAAABJRU5ErkJggg==">
+    تولید کد</button>
+  <textarea spellcheck="false" onclick="javascript: this.select();" id="generatedCode" class="w-100" name="gc" cols="30" rows="5" style="direction: ltr;"></textarea>
+  <button class="btn btn-success w-100 d-block copymim" style="margin-bottom: 1em; border-bottom-left-radius: 2em;border-bottom-right-radius: 2em;" mimr-clipboard-target="#generatedCode">کپی کد
+  <img style="margin-left: .3em;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAc0lEQVRIid3UwQ3AIAiFYUfpKIzeTWSEbvD31vSgBjCm1HcWPqOEUrYPIEDFngqIB1BH8wfxAKHkAQwXOIBzGfBCxgCT02IBpqbFAoSSFxh86E8Aazr1uhJQWsuuVxg99z3gfaIUwBXorx5A8O2j9rRslxs69C8j+kxQagAAAABJRU5ErkJggg==">
+  </button>
+</div>
+</body>
+<!--scripts and functionality--><!--{{{-->
+<script src="https://bayanbox.ir/download/4395638023237594655/clipboard.min.js"></script>
+<script src="//bayanbox.ir/download/1633418358704643857/font-changing.js"></script>
+<script src="./script.js"></script>
+<!--scripts and functionality--><!--}}}-->
+</html>
